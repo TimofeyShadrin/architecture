@@ -1,9 +1,9 @@
 package ru.tshadrin.architecture.homework_one.store3D;
 
-import ru.geekbrains.lesson1.store3D.inmemory.ModelStore;
-import ru.geekbrains.lesson1.store3D.inmemory.Observer1;
-import ru.geekbrains.lesson1.store3D.models.Poligon;
-import ru.geekbrains.lesson1.store3D.models.PoligonalModel;
+import ru.tshadrin.architecture.homework_one.store3D.inmemory.ModelStore;
+import ru.tshadrin.architecture.homework_one.store3D.inmemory.Observer1;
+import ru.tshadrin.architecture.homework_one.store3D.models.Poligon;
+import ru.tshadrin.architecture.homework_one.store3D.models.PoligonalModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +18,9 @@ public class Program {
         store.RegisterModelChanger(observer1);
 
         Poligon p1 = new Poligon();
-        List<Poligon> poligons = new ArrayList<>();
-        poligons.add(p1);
-        PoligonalModel poligonalModel = new PoligonalModel(poligons);
+        List<Poligon> polygons = new ArrayList<>();
+        polygons.add(p1);
+        PoligonalModel poligonalModel = new PoligonalModel(polygons);
         store.add(poligonalModel);
 
     }
