@@ -1,13 +1,30 @@
 package ru.tshadrin.architecture.lesson_one;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import ru.tshadrin.architecture.lesson_one.store.*;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Store store = new Store();
+
+        Product product1 = new Product("AA1", 100);
+        Product product2 = new Product("BB1", 200);
+
+        Buyer buyer1 = new Buyer("Buyer1");
+
+        OrderItem orderItem1 = new OrderItem(product1, 2);
+        OrderItem orderItem2 = new OrderItem(product2, 3);
+        List<OrderItem> items = new ArrayList<>();
+        items.add(orderItem1);
+        items.add(orderItem2);
+
+        Order order1 = new Order(LocalDateTime.now(), "Address", "+79001112233", buyer1, items);
+
+        store.addOrder(order1);
     }
 }
