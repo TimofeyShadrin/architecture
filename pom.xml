@@ -12,6 +12,8 @@
 
         <module>lesson_01</module>
         <module>homework_01</module>
+        <module>lesson_02</module>
+        <module>homework_02</module>
     </modules>
 
     <properties>
